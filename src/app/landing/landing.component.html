@@ -1,0 +1,41 @@
+<style>
+    .form-signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      -webkit-clip-path: inset(50%);
+      clip-path: inset(50%);
+      border: 0;
+    }
+  </style>
+  
+  <form class="form-signin" [formGroup]="loginForm" (submit)="login()">
+    <img src="/eAttendanceLogo.png" style="width:300px;height: 100px; " class="center-block">
+  
+    <h1 class="h3 mb-3 font-weight-normal">Login </h1>
+  
+    <label class="sr-only" for="phoneNumber">Phone Number</label>
+    <input type="tel" formControlName="phoneNumber" class="form-control" style="width: 300px; " id="phoneNumber"
+      placeholder="Enter phone number" />
+  <br/>
+    <label class="sr-only" for="pinNumber">PIN</label>
+    <input type="number" formControlName="pin" class="form-control" style="width: 300px;" id="pinNumber"
+      placeholder="Enter 4 digit PIN" max="9999" size="4" maxlength="4">
+    <br />
+  
+    <button type="submit"  class="btn btn-primary" style="display: block;
+      width: 100%;">Submit</button>
+  
+  </form>

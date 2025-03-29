@@ -1,22 +1,15 @@
 import { Component } from '@angular/core';
-import{FormGroup,FormControl, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [
- ReactiveFormsModule  ],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Student';
-
-  loginForm = new FormGroup({
-    phoneNumber: new FormControl(''),
-    pin: new FormControl('')
-  })
-
-  login(){
-    console.log(this.loginForm.value.phoneNumber ?? '');
-  }
+  
 
 }
